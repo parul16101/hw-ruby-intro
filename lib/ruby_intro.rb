@@ -1,15 +1,15 @@
-def sum arr
+# def sum arr
   
-  s = 0
-  if arr.empty?
-    return 0
-  else
-    for i in 0..arr.length-1
-      s += arr[i]
-    end
-  return s
-  end
-end
+#   s = 0
+#   if arr.empty?
+#     return 0
+#   else
+#     for i in 0..arr.length-1
+#       s += arr[i]
+#     end
+#   return s
+#   end
+# end
 
 # def max_2_sum arr
 #   if arr.length==0
@@ -42,60 +42,38 @@ end
 # 	"Hello, #{name}"
 # end
 
+# def starts_with_consonant? (s)
+# 	/^[b-df-hj-np-tv-z]/i.match(s) != nil
+# end
 
-
-# def starts_with_consonant? s
-#   if s.empty? 
-#     return false
-#   elsif (s[0]=~/^[aeiou]/||s[0,1]=~/^[AEIOU]/) 
-#     return false
-#   elsif (s[0]=~/[a-zA-Z]/)
-#     return false
-#   else
-#     return true
+# def binary_multiple_of_? s
+#   n = 0
+#   for i in 0..s.length
+#     if (s[i] != '0' && s[i] != '1')
+#       return false
+#     end
+#     n *= 2
+#     n += s[i].to_i
 #   end
+#   return n%4 == 0
 # end
-
-# def binary_multiple_of_4? s
-#   return false if s == "0"
-#   return s.to_i % 4 == 0
-# end
-
-
-
-
-
-
-
-
-
 
 
 
 # # Part 3
 
-# class BookInStock
+class BookInStock
 
-#   attr_accessor:isn, :price
+ attr_accessor :isbn, :price
 
+  def initialize isbn, price
+    raise ArgumentError if isbn.empty? || price <= 0
+    @isbn = isbn
+    @price = price
+  end
 
-#   def initialize isbn, price
+  def price_as_string
+    format("$%.2f", @price)
+  end
 
-#   raise ArgumentError if isbn.empty? || price <= 0
-
-#   @isbn = isbn
-
-#   @price = price
-
-#   end
-
-# def price_as_string
-
-
-#   format("$%.2f", @price)
-
-
-# end
-
-
-# end
+end
