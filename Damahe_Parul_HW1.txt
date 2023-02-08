@@ -1,0 +1,328 @@
+
+Ruby intro part 1
+  #sum
+[32m    should be defined[0m
+[31m    returns correct sum [20 points] (FAILED - 1)[0m
+[32m    works on the empty array [10 points][0m
+  #max_2_sum
+[31m    should be defined (FAILED - 2)[0m
+[31m    returns the correct sum [7 points] (FAILED - 3)[0m
+[31m    works even if 2 largest values are the same [3 points] (FAILED - 4)[0m
+[31m    returns zero if array is empty [10 points] (FAILED - 5)[0m
+[31m    returns value of the element if just one element [10 points] (FAILED - 6)[0m
+  #sum_to_n
+[31m    should be defined (FAILED - 7)[0m
+[31m    returns true when any two elements sum to the second argument [30 points] (FAILED - 8)[0m
+[31m    returns false for any single element array [5 points] (FAILED - 9)[0m
+[31m    returns false for an empty array [5 points] (FAILED - 10)[0m
+
+#hello
+[31m  should be defined (FAILED - 11)[0m
+[31m  The hello method returns the correct string [30 points] (FAILED - 12)[0m
+
+#starts_with_consonant?
+[31m  should be defined (FAILED - 13)[0m
+[31m  classifies true cases [10 points] (FAILED - 14)[0m
+[31m  classifies false cases [10 points] (FAILED - 15)[0m
+[31m  works on the empty string [5 points] (FAILED - 16)[0m
+[31m  works on nonletters [5 points] (FAILED - 17)[0m
+
+#binary_multiple_of_4?
+[31m  should be defined (FAILED - 18)[0m
+[31m  classifies valid binary numbers [30 points] (FAILED - 19)[0m
+[31m  rejects invalid binary numbers [10 points] (FAILED - 20)[0m
+
+BookInStock
+[31m  should be defined (FAILED - 21)[0m
+  getters and setters
+[31m    should set ISBN [10 points] (FAILED - 22)[0m
+[31m    should set price [10 points] (FAILED - 23)[0m
+[31m    should be able to change ISBN [10 points] (FAILED - 24)[0m
+[31m    should be able to change price [10 points] (FAILED - 25)[0m
+  constructor
+[31m    should reject invalid ISBN number [10 points] (FAILED - 26)[0m
+[31m    should reject zero price [10 points] (FAILED - 27)[0m
+[31m    should reject negative price [10 points] (FAILED - 28)[0m
+  #price_as_string
+[31m    should be defined (FAILED - 29)[0m
+[31m    should display 33.95 as "$33.95" [10 points] (FAILED - 30)[0m
+[31m    should display 1.1 as $1.10 [10 points] (FAILED - 31)[0m
+[31m    should display 20 as $20.00 [10 points] (FAILED - 32)[0m
+
+Failures:
+
+  1) Ruby intro part 1 #sum returns correct sum [20 points]
+     [31mFailure/Error: expect(sum([1, 2, 3, 4, 5])).to eq(15)[0m
+     [31m[0m
+     [31m  expected: 15[0m
+     [31m       got: -15[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/part1_spec.rb:13:in `block (3 levels) in <top (required)>'[0m
+
+  2) Ruby intro part 1 #max_2_sum should be defined
+     [31mFailure/Error: expect { max_2_sum([1, 2, 3]) }.not_to raise_error[0m
+     [31m[0m
+     [31m  expected no Exception, got #<NoMethodError: undefined method `max_2_sum' for #<RSpec::ExampleGroups::RubyIntroPart1::Max2Sum:0x0000000001316e78>> with backtrace:[0m
+     [31m    # ./spec/part1_spec.rb:26:in `block (4 levels) in <top (required)>'[0m
+     [31m    # ./spec/part1_spec.rb:26:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/part1_spec.rb:26:in `block (3 levels) in <top (required)>'[0m
+
+  3) Ruby intro part 1 #max_2_sum returns the correct sum [7 points]
+     [31mFailure/Error: expect(max_2_sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `max_2_sum' for #<RSpec::ExampleGroups::RubyIntroPart1::Max2Sum:0x000000000145f3c0>[0m
+     [36m# ./spec/part1_spec.rb:29:in `block (3 levels) in <top (required)>'[0m
+
+  4) Ruby intro part 1 #max_2_sum works even if 2 largest values are the same [3 points]
+     [31mFailure/Error: expect(max_2_sum([1, 2, 3, 3])).to eq(6)[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `max_2_sum' for #<RSpec::ExampleGroups::RubyIntroPart1::Max2Sum:0x000000000149a010>[0m
+     [36m# ./spec/part1_spec.rb:34:in `block (3 levels) in <top (required)>'[0m
+
+  5) Ruby intro part 1 #max_2_sum returns zero if array is empty [10 points]
+     [31mFailure/Error: expect(max_2_sum([])).to be_zero[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `max_2_sum' for #<RSpec::ExampleGroups::RubyIntroPart1::Max2Sum:0x00000000014ca198>[0m
+     [36m# ./spec/part1_spec.rb:37:in `block (3 levels) in <top (required)>'[0m
+
+  6) Ruby intro part 1 #max_2_sum returns value of the element if just one element [10 points]
+     [31mFailure/Error: expect(max_2_sum([3])).to eq(3)[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `max_2_sum' for #<RSpec::ExampleGroups::RubyIntroPart1::Max2Sum:0x00000000015160c0>[0m
+     [36m# ./spec/part1_spec.rb:40:in `block (3 levels) in <top (required)>'[0m
+
+  7) Ruby intro part 1 #sum_to_n should be defined
+     [31mFailure/Error: expect { sum_to_n?([1, 2, 3], 4) }.not_to raise_error[0m
+     [31m[0m
+     [31m  expected no Exception, got #<NoMethodError: undefined method `sum_to_n?' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN:0x00000000015303f8>> with backtrace:[0m
+     [31m    # ./spec/part1_spec.rb:46:in `block (4 levels) in <top (required)>'[0m
+     [31m    # ./spec/part1_spec.rb:46:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/part1_spec.rb:46:in `block (3 levels) in <top (required)>'[0m
+
+  8) Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+     [31mFailure/Error: expect(sum_to_n?([1, 2, 3, 4, 5], 5)).to be true # 2 + 3 = 5[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `sum_to_n?' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN:0x0000000001747740>[0m
+     [36m# ./spec/part1_spec.rb:49:in `block (3 levels) in <top (required)>'[0m
+
+  9) Ruby intro part 1 #sum_to_n returns false for any single element array [5 points]
+     [31mFailure/Error: expect(sum_to_n?([0], 0)).to be false[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `sum_to_n?' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN:0x000000000174aee0>[0m
+     [36m# ./spec/part1_spec.rb:56:in `block (3 levels) in <top (required)>'[0m
+
+  10) Ruby intro part 1 #sum_to_n returns false for an empty array [5 points]
+      [31mFailure/Error: expect(sum_to_n?([], 0)).to be false[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `sum_to_n?' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN:0x0000000001748d48>[0m
+      [36m# ./spec/part1_spec.rb:62:in `block (3 levels) in <top (required)>'[0m
+
+  11) #hello should be defined
+      [31mFailure/Error: expect { hello('Testing') }.not_to raise_error#::NoMethodError)[0m
+      [31m[0m
+      [31m  expected no Exception, got #<NoMethodError: undefined method `hello' for #<RSpec::ExampleGroups::Hello:0x000000000175ef80>> with backtrace:[0m
+      [31m    # ./spec/part2_spec.rb:7:in `block (3 levels) in <top (required)>'[0m
+      [31m    # ./spec/part2_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+      [36m# ./spec/part2_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+
+  12) #hello The hello method returns the correct string [30 points]
+      [31mFailure/Error: expect(hello('Dan').class).to eq(String)[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `hello' for #<RSpec::ExampleGroups::Hello:0x00000000017dae78>[0m
+      [36m# ./spec/part2_spec.rb:11:in `block (2 levels) in <top (required)>'[0m
+
+  13) #starts_with_consonant? should be defined
+      [31mFailure/Error: expect { starts_with_consonant?('d') }.not_to raise_error#::NoMethodError)[0m
+      [31m[0m
+      [31m  expected no Exception, got #<NoMethodError: undefined method `starts_with_consonant?' for #<RSpec::ExampleGroups::StartsWithConsonant:0x00000000017e6b38>> with backtrace:[0m
+      [31m    # ./spec/part2_spec.rb:20:in `block (3 levels) in <top (required)>'[0m
+      [31m    # ./spec/part2_spec.rb:20:in `block (2 levels) in <top (required)>'[0m
+      [36m# ./spec/part2_spec.rb:20:in `block (2 levels) in <top (required)>'[0m
+
+  14) #starts_with_consonant? classifies true cases [10 points]
+      [31mFailure/Error: expect(starts_with_consonant?('v')).to be_truthy, "'v' is a consonant"[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `starts_with_consonant?' for #<RSpec::ExampleGroups::StartsWithConsonant:0x0000000001a94420>[0m
+      [36m# ./spec/part2_spec.rb:23:in `block (2 levels) in <top (required)>'[0m
+
+  15) #starts_with_consonant? classifies false cases [10 points]
+      [31mFailure/Error: expect(starts_with_consonant?('a')).to be_falsy, "'a' is not a consonant"[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `starts_with_consonant?' for #<RSpec::ExampleGroups::StartsWithConsonant:0x0000000001a9b1d0>[0m
+      [36m# ./spec/part2_spec.rb:29:in `block (2 levels) in <top (required)>'[0m
+
+  16) #starts_with_consonant? works on the empty string [5 points]
+      [31mFailure/Error: expect(starts_with_consonant?('')).to be_falsy[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `starts_with_consonant?' for #<RSpec::ExampleGroups::StartsWithConsonant:0x0000000001a99b50>[0m
+      [36m# ./spec/part2_spec.rb:35:in `block (2 levels) in <top (required)>'[0m
+
+  17) #starts_with_consonant? works on nonletters [5 points]
+      [31mFailure/Error: expect(starts_with_consonant?('#foo')).to be_falsy[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `starts_with_consonant?' for #<RSpec::ExampleGroups::StartsWithConsonant:0x0000000001ab3d98>[0m
+      [36m# ./spec/part2_spec.rb:38:in `block (2 levels) in <top (required)>'[0m
+
+  18) #binary_multiple_of_4? should be defined
+      [31mFailure/Error: expect { binary_multiple_of_4?('yes') }.not_to raise_error#::NoMethodError)[0m
+      [31m[0m
+      [31m  expected no Exception, got #<NoMethodError: undefined method `binary_multiple_of_4?' for #<RSpec::ExampleGroups::BinaryMultipleOf4:0x0000000001ab21f0>> with backtrace:[0m
+      [31m    # ./spec/part2_spec.rb:44:in `block (3 levels) in <top (required)>'[0m
+      [31m    # ./spec/part2_spec.rb:44:in `block (2 levels) in <top (required)>'[0m
+      [36m# ./spec/part2_spec.rb:44:in `block (2 levels) in <top (required)>'[0m
+
+  19) #binary_multiple_of_4? classifies valid binary numbers [30 points]
+      [31mFailure/Error: expect(binary_multiple_of_4?(string)).to be_truthy,  "Incorrect results for input: \"#{string}\""[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `binary_multiple_of_4?' for #<RSpec::ExampleGroups::BinaryMultipleOf4:0x0000000001acdc98>[0m
+      [36m# ./spec/part2_spec.rb:48:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/part2_spec.rb:47:in `each'[0m
+      [36m# ./spec/part2_spec.rb:47:in `block (2 levels) in <top (required)>'[0m
+
+  20) #binary_multiple_of_4? rejects invalid binary numbers [10 points]
+      [31mFailure/Error: expect(binary_multiple_of_4?('a100')).to be_falsy, "'a100' is not a valid binary number!"[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `binary_multiple_of_4?' for #<RSpec::ExampleGroups::BinaryMultipleOf4:0x0000000001accb18>[0m
+      [36m# ./spec/part2_spec.rb:55:in `block (2 levels) in <top (required)>'[0m
+
+  21) BookInStock should be defined
+      [31mFailure/Error: expect { BookInStock }.not_to raise_error[0m
+      [31m[0m
+      [31m  expected no Exception, got #<NameError: uninitialized constant BookInStock> with backtrace:[0m
+      [31m    # ./spec/part3_spec.rb:7:in `block (3 levels) in <top (required)>'[0m
+      [31m    # ./spec/part3_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+      [36m# ./spec/part3_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+
+  22) BookInStock getters and setters should set ISBN [10 points]
+      [31mFailure/Error: before(:each)  { @book = BookInStock.new('isbn1', 33.8) }[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:11:in `block (3 levels) in <top (required)>'[0m
+
+  23) BookInStock getters and setters should set price [10 points]
+      [31mFailure/Error: before(:each)  { @book = BookInStock.new('isbn1', 33.8) }[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:11:in `block (3 levels) in <top (required)>'[0m
+
+  24) BookInStock getters and setters should be able to change ISBN [10 points]
+      [31mFailure/Error: before(:each)  { @book = BookInStock.new('isbn1', 33.8) }[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:11:in `block (3 levels) in <top (required)>'[0m
+
+  25) BookInStock getters and setters should be able to change price [10 points]
+      [31mFailure/Error: before(:each)  { @book = BookInStock.new('isbn1', 33.8) }[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:11:in `block (3 levels) in <top (required)>'[0m
+
+  26) BookInStock constructor should reject invalid ISBN number [10 points]
+      [31mFailure/Error: expect { BookInStock.new('', 25.00) }.to raise_error(ArgumentError)[0m
+      [31m[0m
+      [31m  expected ArgumentError, got #<NameError: uninitialized constant BookInStock> with backtrace:[0m
+      [31m    # ./spec/part3_spec.rb:29:in `block (4 levels) in <top (required)>'[0m
+      [31m    # ./spec/part3_spec.rb:29:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/part3_spec.rb:29:in `block (3 levels) in <top (required)>'[0m
+
+  27) BookInStock constructor should reject zero price [10 points]
+      [31mFailure/Error: expect { BookInStock.new('isbn1', 0) }.to raise_error(ArgumentError)[0m
+      [31m[0m
+      [31m  expected ArgumentError, got #<NameError: uninitialized constant BookInStock> with backtrace:[0m
+      [31m    # ./spec/part3_spec.rb:32:in `block (4 levels) in <top (required)>'[0m
+      [31m    # ./spec/part3_spec.rb:32:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/part3_spec.rb:32:in `block (3 levels) in <top (required)>'[0m
+
+  28) BookInStock constructor should reject negative price [10 points]
+      [31mFailure/Error: expect { BookInStock.new('isbn1', -5.0) }.to raise_error(ArgumentError)[0m
+      [31m[0m
+      [31m  expected ArgumentError, got #<NameError: uninitialized constant BookInStock> with backtrace:[0m
+      [31m    # ./spec/part3_spec.rb:35:in `block (4 levels) in <top (required)>'[0m
+      [31m    # ./spec/part3_spec.rb:35:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/part3_spec.rb:35:in `block (3 levels) in <top (required)>'[0m
+
+  29) BookInStock #price_as_string should be defined
+      [31mFailure/Error: expect(BookInStock.new('isbn1', 10)).to respond_to(:price_as_string)[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:40:in `block (3 levels) in <top (required)>'[0m
+
+  30) BookInStock #price_as_string should display 33.95 as "$33.95" [10 points]
+      [31mFailure/Error: expect(BookInStock.new('isbn11', 33.95).price_as_string).to eq('$33.95')[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:43:in `block (3 levels) in <top (required)>'[0m
+
+  31) BookInStock #price_as_string should display 1.1 as $1.10 [10 points]
+      [31mFailure/Error: expect(BookInStock.new('isbn11', 1.1).price_as_string).to eq('$1.10')[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:46:in `block (3 levels) in <top (required)>'[0m
+
+  32) BookInStock #price_as_string should display 20 as $20.00 [10 points]
+      [31mFailure/Error: expect(BookInStock.new('isbn11', 20).price_as_string).to eq('$20.00')[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  uninitialized constant BookInStock[0m
+      [36m# ./spec/part3_spec.rb:49:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.04707 seconds (files took 0.10182 seconds to load)
+[31m34 examples, 32 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/part1_spec.rb:11[0m [36m# Ruby intro part 1 #sum returns correct sum [20 points][0m
+[31mrspec ./spec/part1_spec.rb:25[0m [36m# Ruby intro part 1 #max_2_sum should be defined[0m
+[31mrspec ./spec/part1_spec.rb:28[0m [36m# Ruby intro part 1 #max_2_sum returns the correct sum [7 points][0m
+[31mrspec ./spec/part1_spec.rb:33[0m [36m# Ruby intro part 1 #max_2_sum works even if 2 largest values are the same [3 points][0m
+[31mrspec ./spec/part1_spec.rb:36[0m [36m# Ruby intro part 1 #max_2_sum returns zero if array is empty [10 points][0m
+[31mrspec ./spec/part1_spec.rb:39[0m [36m# Ruby intro part 1 #max_2_sum returns value of the element if just one element [10 points][0m
+[31mrspec ./spec/part1_spec.rb:45[0m [36m# Ruby intro part 1 #sum_to_n should be defined[0m
+[31mrspec ./spec/part1_spec.rb:48[0m [36m# Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points][0m
+[31mrspec ./spec/part1_spec.rb:55[0m [36m# Ruby intro part 1 #sum_to_n returns false for any single element array [5 points][0m
+[31mrspec ./spec/part1_spec.rb:61[0m [36m# Ruby intro part 1 #sum_to_n returns false for an empty array [5 points][0m
+[31mrspec ./spec/part2_spec.rb:6[0m [36m# #hello should be defined[0m
+[31mrspec ./spec/part2_spec.rb:10[0m [36m# #hello The hello method returns the correct string [30 points][0m
+[31mrspec ./spec/part2_spec.rb:19[0m [36m# #starts_with_consonant? should be defined[0m
+[31mrspec ./spec/part2_spec.rb:22[0m [36m# #starts_with_consonant? classifies true cases [10 points][0m
+[31mrspec ./spec/part2_spec.rb:28[0m [36m# #starts_with_consonant? classifies false cases [10 points][0m
+[31mrspec ./spec/part2_spec.rb:34[0m [36m# #starts_with_consonant? works on the empty string [5 points][0m
+[31mrspec ./spec/part2_spec.rb:37[0m [36m# #starts_with_consonant? works on nonletters [5 points][0m
+[31mrspec ./spec/part2_spec.rb:43[0m [36m# #binary_multiple_of_4? should be defined[0m
+[31mrspec ./spec/part2_spec.rb:46[0m [36m# #binary_multiple_of_4? classifies valid binary numbers [30 points][0m
+[31mrspec ./spec/part2_spec.rb:54[0m [36m# #binary_multiple_of_4? rejects invalid binary numbers [10 points][0m
+[31mrspec ./spec/part3_spec.rb:6[0m [36m# BookInStock should be defined[0m
+[31mrspec ./spec/part3_spec.rb:12[0m [36m# BookInStock getters and setters should set ISBN [10 points][0m
+[31mrspec ./spec/part3_spec.rb:15[0m [36m# BookInStock getters and setters should set price [10 points][0m
+[31mrspec ./spec/part3_spec.rb:18[0m [36m# BookInStock getters and setters should be able to change ISBN [10 points][0m
+[31mrspec ./spec/part3_spec.rb:22[0m [36m# BookInStock getters and setters should be able to change price [10 points][0m
+[31mrspec ./spec/part3_spec.rb:28[0m [36m# BookInStock constructor should reject invalid ISBN number [10 points][0m
+[31mrspec ./spec/part3_spec.rb:31[0m [36m# BookInStock constructor should reject zero price [10 points][0m
+[31mrspec ./spec/part3_spec.rb:34[0m [36m# BookInStock constructor should reject negative price [10 points][0m
+[31mrspec ./spec/part3_spec.rb:39[0m [36m# BookInStock #price_as_string should be defined[0m
+[31mrspec ./spec/part3_spec.rb:42[0m [36m# BookInStock #price_as_string should display 33.95 as "$33.95" [10 points][0m
+[31mrspec ./spec/part3_spec.rb:45[0m [36m# BookInStock #price_as_string should display 1.1 as $1.10 [10 points][0m
+[31mrspec ./spec/part3_spec.rb:48[0m [36m# BookInStock #price_as_string should display 20 as $20.00 [10 points][0m
+
