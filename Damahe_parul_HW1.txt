@@ -1,0 +1,89 @@
+
+Ruby intro part 1
+  #sum
+[32m    should be defined[0m
+[32m    returns correct sum [20 points][0m
+[32m    works on the empty array [10 points][0m
+  #max_2_sum
+[32m    should be defined[0m
+[32m    returns the correct sum [7 points][0m
+[32m    works even if 2 largest values are the same [3 points][0m
+[32m    returns zero if array is empty [10 points][0m
+[32m    returns value of the element if just one element [10 points][0m
+  #sum_to_n
+[32m    should be defined[0m
+[32m    returns true when any two elements sum to the second argument [30 points][0m
+[32m    returns false for any single element array [5 points][0m
+[32m    returns false for an empty array [5 points][0m
+
+#hello
+[32m  should be defined[0m
+[32m  The hello method returns the correct string [30 points][0m
+
+#starts_with_consonant?
+[32m  should be defined[0m
+[32m  classifies true cases [10 points][0m
+[32m  classifies false cases [10 points][0m
+[32m  works on the empty string [5 points][0m
+[32m  works on nonletters [5 points][0m
+
+#binary_multiple_of_4?
+[31m  should be defined (FAILED - 1)[0m
+[31m  classifies valid binary numbers [30 points] (FAILED - 2)[0m
+[31m  rejects invalid binary numbers [10 points] (FAILED - 3)[0m
+
+BookInStock
+[32m  should be defined[0m
+  getters and setters
+[32m    should set ISBN [10 points][0m
+[32m    should set price [10 points][0m
+[32m    should be able to change ISBN [10 points][0m
+[32m    should be able to change price [10 points][0m
+  constructor
+[32m    should reject invalid ISBN number [10 points][0m
+[32m    should reject zero price [10 points][0m
+[32m    should reject negative price [10 points][0m
+  #price_as_string
+[32m    should be defined[0m
+[32m    should display 33.95 as "$33.95" [10 points][0m
+[32m    should display 1.1 as $1.10 [10 points][0m
+[32m    should display 20 as $20.00 [10 points][0m
+
+Failures:
+
+  1) #binary_multiple_of_4? should be defined
+     [31mFailure/Error: expect { binary_multiple_of_4?('yes') }.not_to raise_error#::NoMethodError)[0m
+     [31m[0m
+     [31m  expected no Exception, got #<NoMethodError: undefined method `binary_multiple_of_4?' for #<RSpec::ExampleGroups::BinaryMultipleOf4:0x0000000001ec1cc8>[0m
+     [31m  Did you mean?  binary_multiple_of_?> with backtrace:[0m
+     [31m    # ./spec/part2_spec.rb:44:in `block (3 levels) in <top (required)>'[0m
+     [31m    # ./spec/part2_spec.rb:44:in `block (2 levels) in <top (required)>'[0m
+     [36m# ./spec/part2_spec.rb:44:in `block (2 levels) in <top (required)>'[0m
+
+  2) #binary_multiple_of_4? classifies valid binary numbers [30 points]
+     [31mFailure/Error: expect(binary_multiple_of_4?(string)).to be_truthy,  "Incorrect results for input: \"#{string}\""[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `binary_multiple_of_4?' for #<RSpec::ExampleGroups::BinaryMultipleOf4:0x00000000019a1ec8>[0m
+     [31m  Did you mean?  binary_multiple_of_?[0m
+     [36m# ./spec/part2_spec.rb:48:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/part2_spec.rb:47:in `each'[0m
+     [36m# ./spec/part2_spec.rb:47:in `block (2 levels) in <top (required)>'[0m
+
+  3) #binary_multiple_of_4? rejects invalid binary numbers [10 points]
+     [31mFailure/Error: expect(binary_multiple_of_4?('a100')).to be_falsy, "'a100' is not a valid binary number!"[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `binary_multiple_of_4?' for #<RSpec::ExampleGroups::BinaryMultipleOf4:0x00000000019a6478>[0m
+     [31m  Did you mean?  binary_multiple_of_?[0m
+     [36m# ./spec/part2_spec.rb:55:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.05503 seconds (files took 0.11619 seconds to load)
+[31m34 examples, 3 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/part2_spec.rb:43[0m [36m# #binary_multiple_of_4? should be defined[0m
+[31mrspec ./spec/part2_spec.rb:46[0m [36m# #binary_multiple_of_4? classifies valid binary numbers [30 points][0m
+[31mrspec ./spec/part2_spec.rb:54[0m [36m# #binary_multiple_of_4? rejects invalid binary numbers [10 points][0m
+
